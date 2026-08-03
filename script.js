@@ -12,9 +12,6 @@ document.querySelectorAll('[data-brand-name]').forEach((element) => {
 document.querySelectorAll('[data-founder-name]').forEach((element) => {
   element.textContent = config.founderName;
 });
-document.querySelectorAll('[data-founder-initials]').forEach((element) => {
-  element.textContent = config.founderInitials;
-});
 document.querySelectorAll('[data-booking-link]').forEach((link) => {
   link.href = bookingUrl;
 });

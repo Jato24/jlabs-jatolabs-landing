@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title>Jato Labs — nudo de sistemas interconectados</title>
+  <g fill="none" stroke="#c9ff3d" stroke-width="6" stroke-linecap="square" stroke-linejoin="miter">
+    <path d="M12 27V12h15l25 25v15H37L12 27Z"/>
+    <path d="M37 12h15v15L27 52H12V37L37 12Z"/>
+  </g>
+  <path d="M27 12l10 10" fill="none" stroke="#090b10" stroke-width="10"/>
+  <path d="M27 12l10 10" fill="none" stroke="#c9ff3d" stroke-width="6"/>
+  <path d="M27 52l10-10" fill="none" stroke="#090b10" stroke-width="10"/>
+  <path d="M27 52l10-10" fill="none" stroke="#c9ff3d" stroke-width="6"/>
+</svg>

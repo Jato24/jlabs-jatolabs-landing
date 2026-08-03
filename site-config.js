@@ -1,7 +1,6 @@
 window.SITE_CONFIG = Object.freeze({
   brandName: 'Jato Labs',
   founderName: 'Miguel Jato',
-  founderInitials: 'MJ',
   domain: 'https://jatolabs.tech',
   email: 'miguel@jatolabs.tech',
   phone: '+52 55 1502 4056',
