@@ -9,6 +9,12 @@ const bookingUrl = config.bookingUrl || mailto;
 document.querySelectorAll('[data-brand-name]').forEach((element) => {
   element.textContent = config.brandName.toUpperCase();
 });
+document.querySelectorAll('[data-founder-name]').forEach((element) => {
+  element.textContent = config.founderName;
+});
+document.querySelectorAll('[data-founder-initials]').forEach((element) => {
+  element.textContent = config.founderInitials;
+});
 document.querySelectorAll('[data-booking-link]').forEach((link) => {
   link.href = bookingUrl;
 });
@@ -24,6 +30,10 @@ document.querySelectorAll('[data-contact-phone]').forEach((link) => {
 });
 document.querySelectorAll('[data-location]').forEach((element) => {
   element.textContent = `Auditoría técnica boutique · ${config.location}`;
+});
+document.querySelectorAll('[data-linkedin]').forEach((link) => {
+  link.href = config.linkedinUrl;
+  link.hidden = !config.linkedinUrl;
 });
 document.querySelectorAll('[data-current-year]').forEach((element) => {
   element.textContent = new Date().getFullYear();
