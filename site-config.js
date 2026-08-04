@@ -1,5 +1,5 @@
 // @ts-check
-window.SITE_CONFIG = Object.freeze({
+export const siteConfig = Object.freeze({
   brandName: 'Jato Labs',
   founderName: 'Miguel Jato',
   domain: 'https://jatolabs.tech',

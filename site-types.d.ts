@@ -43,6 +43,8 @@ type SiteConfig = Readonly<{
   seo: Readonly<{ title: string; description: string }>;
 }>;
 
-interface Window {
-  SITE_CONFIG: SiteConfig;
-}
+type AppDependencies = Readonly<{
+  root: Document;
+  view: Window & typeof globalThis;
+  config: SiteConfig;
+}>;
