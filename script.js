@@ -133,17 +133,21 @@ auditContent.process.forEach((step, index) => {
   process.append(item);
 });
 
-const experience = document.querySelector('[data-experience]');
-config.experience.forEach((experienceCase) => {
-  const article = createElement('article', 'experience-card reveal');
-  article.append(createElement('h3', '', experienceCase.title));
-  appendTextRow(article, 'Contexto', experienceCase.context);
-  appendTextRow(article, 'Reto', experienceCase.challenge);
-  appendTextRow(article, 'Acción', experienceCase.action);
-  appendTextRow(article, 'Resultado verificable', experienceCase.result);
-  if (experienceCase.technologies) appendTextRow(article, 'Tecnologías', experienceCase.technologies);
-  experience.append(article);
+const profile = config.technicalProfile;
+document.querySelector('[data-profile-role]').textContent = profile.role;
+document.querySelector('[data-profile-introduction]').textContent = profile.introduction;
+document.querySelector('[data-profile-perspective]').textContent = profile.perspective;
+document.querySelector('[data-profile-linkedin-cta]').textContent = profile.linkedinCta;
+document.querySelector('[data-profile-credential-name]').textContent = profile.credential.name;
+document.querySelector('[data-profile-credential-issuer]').textContent = profile.credential.issuer;
+document.querySelector('[data-profile-credential-validity]').textContent = profile.credential.validity;
+const profileHighlights = document.querySelector('[data-profile-highlights]');
+profile.highlights.forEach((highlight) => {
+  const item = createElement('div', 'profile-highlight');
+  item.append(createElement('dt', '', highlight.value), createElement('dd', '', highlight.label));
+  profileHighlights.append(item);
 });
+document.querySelector('[data-profile-expertise]').replaceChildren(...profile.expertise.map((item) => createElement('li', '', item)));
 
 const faqList = document.querySelector('[data-faqs]');
 config.faqs.forEach((faq, index) => {

@@ -85,12 +85,27 @@ window.SITE_CONFIG = Object.freeze({
     'Detección de costos e ineficiencias.', 'Roadmap alineado con objetivos de negocio.',
     'Mejor base para decisiones de inversión, migración o crecimiento.',
   ]),
-  experience: Object.freeze([
-    Object.freeze({ title: 'Optimización de CI/CD', context: 'Pipeline de despliegue de una plataforma SaaS B2B.', challenge: 'Tiempos prolongados de integración y entrega.', action: 'Optimización del flujo, dependencias y validaciones.', result: 'Reducción del tiempo de 7 minutos a 2 minutos con 20 segundos.' }),
-    Object.freeze({ title: 'Servicios serverless', context: 'Operación de una plataforma multi-cloud.', challenge: 'Extender capacidades de la plataforma mediante servicios administrados.', action: 'Diseño y despliegue de funciones serverless.', result: '11+ Cloud Functions diseñadas y desplegadas.', technologies: 'Google Cloud' }),
-    Object.freeze({ title: 'Evolución de plataforma SaaS', context: 'Plataforma SaaS B2B automotriz.', challenge: 'Operar componentes de plataforma en un entorno multi-cloud.', action: 'Construcción y operación de componentes técnicos.', result: '10+ componentes de plataforma operados.', technologies: 'AWS y Google Cloud' }),
-    Object.freeze({ title: 'Liderazgo de ingeniería', context: 'Organización técnica distribuida en cuatro squads.', challenge: 'Coordinar entrega y dirección técnica entre equipos.', action: 'Liderazgo de ingeniería y acompañamiento técnico.', result: 'Entre 8 y 12 ingenieros liderados en 4 squads.' }),
-  ]),
+  technicalProfile: Object.freeze({
+    role: 'Technology Executive · CTO · Cloud Architect',
+    introduction: 'Miguel Jato combina más de 20 años de experiencia tecnológica con una trayectoria liderando equipos de ingeniería, construyendo plataformas digitales y llevando sistemas críticos desde la arquitectura hasta producción.',
+    perspective: 'Su experiencia conecta profundidad técnica y dirección ejecutiva: entiende las decisiones de arquitectura, cloud y seguridad, pero también su impacto en costos, velocidad de entrega, riesgo operativo y crecimiento del negocio.',
+    highlights: Object.freeze([
+      Object.freeze({ value: '20+', label: 'años de experiencia en tecnología' }),
+      Object.freeze({ value: 'AWS + GCP', label: 'arquitectura y operación multi-cloud' }),
+      Object.freeze({ value: 'CTO', label: 'liderazgo técnico y de ingeniería' }),
+    ]),
+    expertise: Object.freeze([
+      'Arquitectura cloud', 'Plataformas SaaS', 'Modernización tecnológica',
+      'Sistemas de misión crítica', 'Liderazgo de ingeniería',
+      'Migraciones e integraciones', 'Seguridad y confiabilidad',
+    ]),
+    credential: Object.freeze({
+      name: 'AWS Certified Solutions Architect – Associate',
+      issuer: 'Amazon Web Services',
+      validity: 'Vigente hasta abril de 2027',
+    }),
+    linkedinCta: 'Conocer la trayectoria completa en LinkedIn',
+  }),
   faqs: Object.freeze([
     Object.freeze({ question: '¿Necesito compartir el código fuente?', answer: 'No necesariamente desde el inicio. El acceso se acuerda según el alcance; algunas revisiones pueden comenzar con arquitectura, configuración, procesos y entrevistas. Cuando revisar código aporta evidencia relevante, se solicita acceso limitado y explícito.' }),
     Object.freeze({ question: '¿Cómo se protege la información de mi empresa?', answer: 'Antes de compartir información se acuerdan el alcance, los accesos y las medidas de confidencialidad aplicables. Se procura usar accesos mínimos y temporales. Los requisitos contractuales específicos se confirman durante la conversación inicial.' }),
