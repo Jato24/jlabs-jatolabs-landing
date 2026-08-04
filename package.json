@@ -1,0 +1,16 @@
+{
+  "name": "jatolabs-landing",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --allowJs --checkJs --noEmit --strict --target ES2020 --module ES2020 --moduleResolution bundler --lib ES2020,DOM,DOM.Iterable --types node site-types.d.ts site-config.js script.js scripts/*.js tests/*.js",
+    "verify": "npm run test && npm run typecheck"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "jsdom": "27.4.0",
+    "vitest": "4.1.10"
+  }
+}

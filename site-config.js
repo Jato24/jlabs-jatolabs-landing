@@ -1,5 +1,5 @@
 // @ts-check
-window.SITE_CONFIG = Object.freeze({
+export const siteConfig = Object.freeze({
   brandName: 'Jato Labs',
   founderName: 'Miguel Jato',
   domain: 'https://jatolabs.tech',
@@ -128,5 +128,5 @@ window.SITE_CONFIG = Object.freeze({
     ]),
     legal: Object.freeze([]),
   }),
-  seo: Object.freeze({ title: 'Jato Labs | Auditoría técnica boutique', description: 'Jato Labs audita arquitectura, cloud, seguridad y operaciones técnicas para convertir riesgos en decisiones y un roadmap priorizado.' }),
+  seo: Object.freeze({ title: 'Jato Labs | Auditoría técnica especializada', description: 'Jato Labs audita arquitectura, cloud, seguridad y operaciones técnicas para convertir riesgos en decisiones y un roadmap priorizado.' }),
 });
