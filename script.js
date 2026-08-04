@@ -20,11 +20,6 @@ document.querySelectorAll('[data-contact-email]').forEach((link) => {
   link.href = `mailto:${config.email}`;
   link.hidden = !config.email;
 });
-document.querySelectorAll('[data-contact-phone]').forEach((link) => {
-  link.textContent = config.phone;
-  link.href = `tel:${config.phone.replace(/[^+\d]/g, '')}`;
-  link.hidden = !config.phone;
-});
 document.querySelectorAll('[data-location]').forEach((element) => {
   element.textContent = `Auditoría técnica boutique · ${config.location}`;
 });

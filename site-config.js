@@ -3,7 +3,6 @@ window.SITE_CONFIG = Object.freeze({
   founderName: 'Miguel Jato',
   domain: 'https://jatolabs.tech',
   email: 'hola@jatolabs.tech',
-  phone: '+52 55 1502 4056',
   location: 'México / Remoto',
   linkedinUrl: 'https://www.linkedin.com/in/jatomx/',
   bookingUrl: '',
