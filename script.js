@@ -2,9 +2,28 @@ const header = document.querySelector('.site-header');
 const toggle = document.querySelector('.menu-toggle');
 const menu = document.querySelector('.nav-links');
 const config = window.SITE_CONFIG;
+const auditContent = config.audit;
 
 const mailto = `mailto:${config.email}?subject=${encodeURIComponent(config.bookingSubject)}`;
 const bookingUrl = config.bookingUrl || mailto;
+
+const getAuditContent = (path) => path.split('.').reduce((value, key) => value?.[key], auditContent);
+
+document.querySelectorAll('[data-audit-content]').forEach((element) => {
+  const value = getAuditContent(element.dataset.auditContent);
+  if (typeof value === 'string') element.textContent = value;
+});
+document.querySelectorAll('[data-audit-list]').forEach((list) => {
+  const items = getAuditContent(list.dataset.auditList);
+  if (!Array.isArray(items)) return;
+  const fragment = document.createDocumentFragment();
+  items.forEach((item) => {
+    const listItem = document.createElement('li');
+    listItem.textContent = item;
+    fragment.append(listItem);
+  });
+  list.replaceChildren(fragment);
+});
 
 document.querySelectorAll('[data-brand-name]').forEach((element) => {
   element.textContent = config.brandName.toUpperCase();
