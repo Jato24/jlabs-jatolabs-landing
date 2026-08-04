@@ -64,7 +64,7 @@ document.querySelectorAll('[data-contact-email]').forEach((node) => {
   link.href = `mailto:${config.email}`;
   link.hidden = !config.email;
 });
-document.querySelectorAll('[data-location]').forEach((element) => { element.textContent = `Auditoría técnica boutique · ${config.location}`; });
+document.querySelectorAll('[data-location]').forEach((element) => { element.textContent = `Auditoría técnica especializada · ${config.location}`; });
 document.querySelectorAll('[data-linkedin]').forEach((node) => {
   const link = /** @type {HTMLAnchorElement} */ (node);
   link.href = config.linkedinUrl;
