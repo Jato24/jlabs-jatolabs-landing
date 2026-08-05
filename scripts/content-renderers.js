@@ -44,7 +44,7 @@ export const renderSiteChrome = (root, config, bookingUrl) => {
     link.href = `mailto:${config.email}`;
     link.hidden = !config.email;
   });
-  root.querySelectorAll('[data-location]').forEach((element) => { element.textContent = `Auditoría técnica especializada · ${config.location}`; });
+  root.querySelectorAll('[data-location]').forEach((element) => { element.textContent = `Auditoría de procesos y tecnología · ${config.location}`; });
   root.querySelectorAll('[data-linkedin]').forEach((element) => {
     const link = /** @type {HTMLAnchorElement} */ (element);
     link.href = config.linkedinUrl;
@@ -169,11 +169,12 @@ export const renderTechnicalProfile = (root, profile) => {
   setText(root, '[data-profile-credential-issuer]', profile.credential.issuer);
   setText(root, '[data-profile-credential-validity]', profile.credential.validity);
   const highlights = queryRequired(root, '[data-profile-highlights]');
-  profile.highlights.forEach((highlight) => {
+  const highlightItems = profile.highlights.map((highlight) => {
     const item = createElement(root, 'div', 'profile-highlight');
     item.append(createElement(root, 'dt', '', highlight.value), createElement(root, 'dd', '', highlight.label));
-    highlights.append(item);
+    return item;
   });
+  highlights.replaceChildren(...highlightItems);
   queryRequired(root, '[data-profile-expertise]').replaceChildren(...profile.expertise.map((item) => createElement(root, 'li', '', item)));
 };
 
