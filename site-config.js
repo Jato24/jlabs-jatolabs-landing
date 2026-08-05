@@ -98,6 +98,7 @@ export const siteConfig = Object.freeze({
       'Arquitectura cloud', 'Plataformas SaaS', 'Modernización tecnológica',
       'Sistemas de misión crítica', 'Liderazgo de ingeniería',
       'Migraciones e integraciones', 'Seguridad y confiabilidad',
+      'Ingeniería de software',
     ]),
     credential: Object.freeze({
       name: 'AWS Certified Solutions Architect – Associate',
