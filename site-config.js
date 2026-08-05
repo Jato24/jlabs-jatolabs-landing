@@ -97,17 +97,6 @@ export const siteConfig = Object.freeze({
       Object.freeze({ value: 'AWS + GCP', label: 'arquitectura y operación multi-cloud' }),
       Object.freeze({ value: 'CTO', label: 'liderazgo técnico y de ingeniería' }),
     ]),
-    expertise: Object.freeze([
-      'Arquitectura cloud', 'Plataformas SaaS', 'Modernización tecnológica',
-      'Sistemas de misión crítica', 'Liderazgo de ingeniería',
-      'Migraciones e integraciones', 'Seguridad y confiabilidad',
-      'Rediseño de procesos', 'Ingeniería de software',
-    ]),
-    credential: Object.freeze({
-      name: 'AWS Certified Solutions Architect – Associate',
-      issuer: 'Amazon Web Services',
-      validity: 'Vigente hasta abril de 2027',
-    }),
     linkedinCta: 'Conocer la trayectoria completa en LinkedIn',
   }),
   faqs: Object.freeze([

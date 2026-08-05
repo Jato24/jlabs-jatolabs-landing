@@ -5,8 +5,6 @@ type TechnicalProfile = Readonly<{
   introduction: string;
   perspective: string;
   highlights: readonly Readonly<{ value: string; label: string }>[];
-  expertise: readonly string[];
-  credential: Readonly<{ name: string; issuer: string; validity: string }>;
   linkedinCta: string;
 }>;
 type FaqItem = Readonly<{ question: string; answer: string }>;

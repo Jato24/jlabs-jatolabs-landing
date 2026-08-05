@@ -32,11 +32,6 @@ describe('posicionamiento de procesos y tecnología', () => {
     expect(page.querySelector('.service-grid .service-icon')).toBeNull();
   });
 
-  it('incluye rediseño de procesos sin perder ingeniería de software', () => {
-    expect(siteConfig.technicalProfile.expertise).toContain('Ingeniería de software');
-    expect(siteConfig.technicalProfile.expertise).toContain('Rediseño de procesos');
-  });
-
   it('mantiene alcance, entregables y resultados críticos en el fallback HTML', () => {
     const html = readFileSync(`${process.cwd()}/index.html`, 'utf8');
     const page = new DOMParser().parseFromString(html, 'text/html');

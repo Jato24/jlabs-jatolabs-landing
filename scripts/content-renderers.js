@@ -146,9 +146,6 @@ export const renderTechnicalProfile = (root, profile) => {
   setText(root, '[data-profile-introduction]', profile.introduction);
   setText(root, '[data-profile-perspective]', profile.perspective);
   setText(root, '[data-profile-linkedin-cta]', profile.linkedinCta);
-  setText(root, '[data-profile-credential-name]', profile.credential.name);
-  setText(root, '[data-profile-credential-issuer]', profile.credential.issuer);
-  setText(root, '[data-profile-credential-validity]', profile.credential.validity);
   const highlights = queryRequired(root, '[data-profile-highlights]');
   const highlightItems = profile.highlights.map((highlight) => {
     const item = createElement(root, 'div', 'profile-highlight');
@@ -156,7 +153,6 @@ export const renderTechnicalProfile = (root, profile) => {
     return item;
   });
   highlights.replaceChildren(...highlightItems);
-  queryRequired(root, '[data-profile-expertise]').replaceChildren(...profile.expertise.map((item) => createElement(root, 'li', '', item)));
 };
 
 /**
