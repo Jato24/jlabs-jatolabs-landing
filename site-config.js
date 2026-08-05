@@ -1,4 +1,13 @@
 // @ts-check
+const navigation = Object.freeze([
+  Object.freeze({ label: 'Servicios', href: '#servicios' }),
+  Object.freeze({ label: 'Entregables', href: '#entregables' }),
+  Object.freeze({ label: 'Proceso', href: '#proceso' }),
+  Object.freeze({ label: 'Experiencia', href: '#experiencia' }),
+  Object.freeze({ label: 'Preguntas frecuentes', href: '#preguntas-frecuentes' }),
+  Object.freeze({ label: 'Contacto', href: '#contacto' }),
+]);
+
 export const siteConfig = Object.freeze({
   brandName: 'Jato Labs',
   founderName: 'Miguel Jato',
@@ -9,14 +18,7 @@ export const siteConfig = Object.freeze({
   bookingUrl: '',
   bookingSubject: 'Llamada de 30 minutos para mi empresa',
   primaryCta: Object.freeze({ label: 'Agendar llamada de 30 minutos' }),
-  navigation: Object.freeze([
-    Object.freeze({ label: 'Servicios', href: '#servicios' }),
-    Object.freeze({ label: 'Proceso', href: '#proceso' }),
-    Object.freeze({ label: 'Entregables', href: '#reporte' }),
-    Object.freeze({ label: 'Experiencia', href: '#experiencia' }),
-    Object.freeze({ label: 'Preguntas frecuentes', href: '#preguntas-frecuentes' }),
-    Object.freeze({ label: 'Contacto', href: '#contacto' }),
-  ]),
+  navigation,
   audit: Object.freeze({
     hero: Object.freeze({
       title: 'Descubre qué está frenando la escalabilidad de tu negocio',
@@ -86,11 +88,9 @@ export const siteConfig = Object.freeze({
     Object.freeze({ title: 'Auditoría y rediseño especializado', description: 'Análisis profundo de procesos prioritarios y de la tecnología que los habilita.', items: Object.freeze(['Procesos y eficiencia operativa.', 'Datos.', 'Arquitectura y escalabilidad.', 'Cloud y FinOps.', 'Seguridad y supply chain.', 'DevOps y confiabilidad.']), cta: 'Solicitar auditoría especializada' }),
   ]),
   expectedOutcomes: Object.freeze([
-    'Procesos más simples y medibles.', 'Reducción de esperas y retrabajo.',
-    'Decisiones de automatización basadas en valor.', 'Identificación de riesgos críticos.',
-    'Visibilidad sobre deuda técnica.', 'Detección de costos e ineficiencias.',
-    'Priorización por impacto y esfuerzo.', 'Roadmap alineado con objetivos de negocio.',
-    'Mejor base para decisiones de inversión, migración o crecimiento.',
+    'Procesos más simples y medibles.', 'Menos esperas y retrabajo.',
+    'Automatización basada en valor.', 'Visibilidad de riesgos, deuda y costos.',
+    'Prioridades claras por impacto y esfuerzo.', 'Roadmap alineado con objetivos de negocio.',
   ]),
   technicalProfile: Object.freeze({
     role: 'Technology Executive · CTO · Cloud Architect',
@@ -128,13 +128,7 @@ export const siteConfig = Object.freeze({
     Object.freeze({ question: '¿Pueden trabajar con mi equipo o proveedor actual?', answer: 'Sí, la revisión está planteada como un proceso colaborativo. La forma de coordinación, responsabilidades y acceso se acuerda con las partes involucradas antes de iniciar.' }),
   ]),
   footer: Object.freeze({
-    navigation: Object.freeze([
-      Object.freeze({ label: 'Servicios', href: '#servicios' }),
-      Object.freeze({ label: 'Proceso', href: '#proceso' }),
-      Object.freeze({ label: 'Entregables', href: '#reporte' }),
-      Object.freeze({ label: 'Preguntas frecuentes', href: '#preguntas-frecuentes' }),
-      Object.freeze({ label: 'Contacto', href: '#contacto' }),
-    ]),
+    navigation,
     legal: Object.freeze([]),
   }),
   seo: Object.freeze({ title: 'Jato Labs | Auditoría de procesos y tecnología', description: 'Jato Labs audita y rediseña procesos de negocio apoyados por tecnología para eliminar fricción, priorizar mejoras y orientar decisiones de automatización e inversión.' }),
