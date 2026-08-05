@@ -52,22 +52,7 @@ export const initMobileMenu = (root, view) => {
  * @param {Document} root
  * @param {Window & typeof globalThis} view
  */
-export const initViewportEffects = (root, view) => {
+export const initHeaderScroll = (root, view) => {
   const header = queryRequired(root, '.site-header');
   view.addEventListener('scroll', () => header.classList.toggle('scrolled', view.scrollY > 20), { passive: true });
-
-  const revealElements = root.querySelectorAll('.reveal');
-  const reducedMotion = view.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (reducedMotion || !('IntersectionObserver' in view)) {
-    revealElements.forEach((element) => element.classList.add('visible'));
-    return;
-  }
-  const observer = new view.IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) return;
-      entry.target.classList.add('visible');
-      observer.unobserve(entry.target);
-    });
-  }, { threshold: 0.08 });
-  revealElements.forEach((element) => observer.observe(element));
 };

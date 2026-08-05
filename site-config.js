@@ -1,22 +1,23 @@
 // @ts-check
+const navigation = Object.freeze([
+  Object.freeze({ label: 'Servicios', href: '#servicios' }),
+  Object.freeze({ label: 'Entregables', href: '#entregables' }),
+  Object.freeze({ label: 'Proceso', href: '#proceso' }),
+  Object.freeze({ label: 'Experiencia', href: '#experiencia' }),
+  Object.freeze({ label: 'Preguntas frecuentes', href: '#preguntas-frecuentes' }),
+  Object.freeze({ label: 'Contacto', href: '#contacto' }),
+]);
+
 export const siteConfig = Object.freeze({
   brandName: 'Jato Labs',
   founderName: 'Miguel Jato',
-  domain: 'https://jatolabs.tech',
   email: 'hola@jatolabs.tech',
   location: 'México / Remoto',
   linkedinUrl: 'https://www.linkedin.com/in/jatomx/',
   bookingUrl: '',
   bookingSubject: 'Llamada de 30 minutos para mi empresa',
   primaryCta: Object.freeze({ label: 'Agendar llamada de 30 minutos' }),
-  navigation: Object.freeze([
-    Object.freeze({ label: 'Servicios', href: '#servicios' }),
-    Object.freeze({ label: 'Proceso', href: '#proceso' }),
-    Object.freeze({ label: 'Entregables', href: '#reporte' }),
-    Object.freeze({ label: 'Experiencia', href: '#experiencia' }),
-    Object.freeze({ label: 'Preguntas frecuentes', href: '#preguntas-frecuentes' }),
-    Object.freeze({ label: 'Contacto', href: '#contacto' }),
-  ]),
+  navigation,
   audit: Object.freeze({
     hero: Object.freeze({
       title: 'Descubre qué está frenando la escalabilidad de tu negocio',
@@ -42,11 +43,9 @@ export const siteConfig = Object.freeze({
     ]),
     duration: 'Duración típica: entre 2 y 4 semanas, dependiendo del alcance y la complejidad de los procesos y sistemas revisados.',
     deliverables: Object.freeze([
-      'Resumen ejecutivo.', 'Mapa del proceso actual.', 'Análisis de valor y fricción.',
-      'Diseño del proceso objetivo.', 'Scorecard de procesos y tecnología.',
-      'Inventario de hallazgos.', 'Matriz de impacto y esfuerzo.',
-      'Oportunidades de automatización.', 'Roadmap de 90 días.',
-      'Sesión de presentación de resultados.',
+      'Mapa del proceso actual y objetivo.', 'Scorecard de procesos y tecnología.',
+      'Hallazgos y matriz de priorización.', 'Oportunidades de automatización.',
+      'Roadmap de 90 días y sesión ejecutiva.',
     ]),
     scorecard: Object.freeze([
       Object.freeze({ label: 'Procesos', score: '58 / 100', status: 'Alto' }),
@@ -81,17 +80,6 @@ export const siteConfig = Object.freeze({
       Object.freeze({ title: 'Sesión ejecutiva', description: 'Resultados, decisiones y ruta de acción con tu equipo.', outcome: 'ACTUAR' }),
     ]),
   }),
-  serviceModes: Object.freeze([
-    Object.freeze({ title: 'Diagnóstico ejecutivo', description: 'Evaluación de alto nivel para identificar fricción operativa, riesgos tecnológicos y oportunidades prioritarias.', items: Object.freeze(['Procesos y valor.', 'Datos y automatización.', 'Arquitectura general.', 'Riesgos y costos.', 'Recomendaciones ejecutivas.', 'Roadmap inicial.']), cta: 'Solicitar diagnóstico' }),
-    Object.freeze({ title: 'Auditoría y rediseño especializado', description: 'Análisis profundo de procesos prioritarios y de la tecnología que los habilita.', items: Object.freeze(['Procesos y eficiencia operativa.', 'Datos.', 'Arquitectura y escalabilidad.', 'Cloud y FinOps.', 'Seguridad y supply chain.', 'DevOps y confiabilidad.']), cta: 'Solicitar auditoría especializada' }),
-  ]),
-  expectedOutcomes: Object.freeze([
-    'Procesos más simples y medibles.', 'Reducción de esperas y retrabajo.',
-    'Decisiones de automatización basadas en valor.', 'Identificación de riesgos críticos.',
-    'Visibilidad sobre deuda técnica.', 'Detección de costos e ineficiencias.',
-    'Priorización por impacto y esfuerzo.', 'Roadmap alineado con objetivos de negocio.',
-    'Mejor base para decisiones de inversión, migración o crecimiento.',
-  ]),
   technicalProfile: Object.freeze({
     role: 'Technology Executive · CTO · Cloud Architect',
     introduction: 'Miguel Jato combina más de 20 años de experiencia tecnológica con una trayectoria liderando equipos de ingeniería, construyendo plataformas digitales y llevando sistemas críticos desde la arquitectura hasta producción.',
@@ -101,17 +89,6 @@ export const siteConfig = Object.freeze({
       Object.freeze({ value: 'AWS + GCP', label: 'arquitectura y operación multi-cloud' }),
       Object.freeze({ value: 'CTO', label: 'liderazgo técnico y de ingeniería' }),
     ]),
-    expertise: Object.freeze([
-      'Arquitectura cloud', 'Plataformas SaaS', 'Modernización tecnológica',
-      'Sistemas de misión crítica', 'Liderazgo de ingeniería',
-      'Migraciones e integraciones', 'Seguridad y confiabilidad',
-      'Rediseño de procesos', 'Ingeniería de software',
-    ]),
-    credential: Object.freeze({
-      name: 'AWS Certified Solutions Architect – Associate',
-      issuer: 'Amazon Web Services',
-      validity: 'Vigente hasta abril de 2027',
-    }),
     linkedinCta: 'Conocer la trayectoria completa en LinkedIn',
   }),
   faqs: Object.freeze([
@@ -128,14 +105,7 @@ export const siteConfig = Object.freeze({
     Object.freeze({ question: '¿Pueden trabajar con mi equipo o proveedor actual?', answer: 'Sí, la revisión está planteada como un proceso colaborativo. La forma de coordinación, responsabilidades y acceso se acuerda con las partes involucradas antes de iniciar.' }),
   ]),
   footer: Object.freeze({
-    navigation: Object.freeze([
-      Object.freeze({ label: 'Servicios', href: '#servicios' }),
-      Object.freeze({ label: 'Proceso', href: '#proceso' }),
-      Object.freeze({ label: 'Entregables', href: '#reporte' }),
-      Object.freeze({ label: 'Preguntas frecuentes', href: '#preguntas-frecuentes' }),
-      Object.freeze({ label: 'Contacto', href: '#contacto' }),
-    ]),
-    legal: Object.freeze([]),
+    navigation,
   }),
   seo: Object.freeze({ title: 'Jato Labs | Auditoría de procesos y tecnología', description: 'Jato Labs audita y rediseña procesos de negocio apoyados por tecnología para eliminar fricción, priorizar mejoras y orientar decisiones de automatización e inversión.' }),
 });

@@ -1,13 +1,10 @@
 type SiteLink = Readonly<{ label: string; href: string }>;
-type ServiceMode = Readonly<{ title: string; description: string; items: readonly string[]; cta: string }>;
 type Finding = Readonly<{ title: string; area: string; severity: 'Crítico' | 'Alto' | 'Medio' | 'Bajo'; impact: string; effort: string; recommendation: string }>;
 type TechnicalProfile = Readonly<{
   role: string;
   introduction: string;
   perspective: string;
   highlights: readonly Readonly<{ value: string; label: string }>[];
-  expertise: readonly string[];
-  credential: Readonly<{ name: string; issuer: string; validity: string }>;
   linkedinCta: string;
 }>;
 type FaqItem = Readonly<{ question: string; answer: string }>;
@@ -26,7 +23,6 @@ type AuditConfig = Readonly<{
 type SiteConfig = Readonly<{
   brandName: string;
   founderName: string;
-  domain: string;
   email: string;
   location: string;
   linkedinUrl: string;
@@ -35,11 +31,9 @@ type SiteConfig = Readonly<{
   primaryCta: Readonly<{ label: string }>;
   navigation: readonly SiteLink[];
   audit: AuditConfig;
-  serviceModes: readonly ServiceMode[];
-  expectedOutcomes: readonly string[];
   technicalProfile: TechnicalProfile;
   faqs: readonly FaqItem[];
-  footer: Readonly<{ navigation: readonly SiteLink[]; legal: readonly SiteLink[] }>;
+  footer: Readonly<{ navigation: readonly SiteLink[] }>;
   seo: Readonly<{ title: string; description: string }>;
 }>;
 

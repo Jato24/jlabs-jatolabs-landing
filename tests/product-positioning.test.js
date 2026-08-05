@@ -31,12 +31,7 @@ describe('posicionamiento de procesos y tecnología', () => {
     expect(cards[0].classList).toContain('service-card-foundation');
   });
 
-  it('incluye rediseño de procesos sin perder ingeniería de software', () => {
-    expect(siteConfig.technicalProfile.expertise).toContain('Ingeniería de software');
-    expect(siteConfig.technicalProfile.expertise).toContain('Rediseño de procesos');
-  });
-
-  it('mantiene alcance, entregables y resultados críticos en el fallback HTML', () => {
+  it('mantiene alcance y entregables críticos en el fallback HTML', () => {
     const html = readFileSync(`${process.cwd()}/index.html`, 'utf8');
     const page = new DOMParser().parseFromString(html, 'text/html');
     /** @param {string} selector */
@@ -44,6 +39,5 @@ describe('posicionamiento de procesos y tecnología', () => {
 
     expect(textOf('[data-audit-list="scope"]')).toEqual(siteConfig.audit.scope);
     expect(textOf('[data-audit-list="deliverables"]')).toEqual(siteConfig.audit.deliverables);
-    expect(textOf('[data-outcomes]')).toEqual(siteConfig.expectedOutcomes);
   });
 });

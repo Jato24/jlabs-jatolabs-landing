@@ -81,25 +81,6 @@ export const renderAuditContent = (root, audit) => {
 
 /**
  * @param {Document} root
- * @param {readonly ServiceMode[]} modes
- * @param {string} bookingUrl
- */
-export const renderServiceModes = (root, modes, bookingUrl) => {
-  const container = queryRequired(root, '[data-service-modes]');
-  modes.forEach((mode, index) => {
-    const article = createElement(root, 'article', 'mode-card reveal');
-    article.append(createElement(root, 'span', 'mode-number', `0${index + 1}`), createElement(root, 'h3', '', mode.title), createElement(root, 'p', '', mode.description));
-    const list = createElement(root, 'ul');
-    list.append(...mode.items.map((item) => createElement(root, 'li', '', item)));
-    const link = /** @type {HTMLAnchorElement} */ (createElement(root, 'a', 'text-link mode-cta', mode.cta));
-    link.href = bookingUrl;
-    article.append(list, link);
-    container.append(article);
-  });
-};
-
-/**
- * @param {Document} root
  * @param {AuditConfig} audit
  */
 export const renderReport = (root, audit) => {
@@ -141,14 +122,12 @@ export const renderReport = (root, audit) => {
 
 /**
  * @param {Document} root
- * @param {readonly string[]} outcomes
  * @param {AuditConfig['process']} process
  */
-export const renderDecisionContent = (root, outcomes, process) => {
-  queryRequired(root, '[data-outcomes]').replaceChildren(...outcomes.map((item) => createElement(root, 'li', '', item)));
+export const renderProcess = (root, process) => {
   const processList = queryRequired(root, '[data-process]');
   process.forEach((step, index) => {
-    const item = createElement(root, 'li', 'reveal');
+    const item = createElement(root, 'li');
     const copy = createElement(root, 'div');
     copy.append(createElement(root, 'h3', '', step.title), createElement(root, 'p', '', step.description));
     item.append(createElement(root, 'span', '', `0${index + 1}`), copy, createElement(root, 'small', '', step.outcome));
@@ -165,9 +144,6 @@ export const renderTechnicalProfile = (root, profile) => {
   setText(root, '[data-profile-introduction]', profile.introduction);
   setText(root, '[data-profile-perspective]', profile.perspective);
   setText(root, '[data-profile-linkedin-cta]', profile.linkedinCta);
-  setText(root, '[data-profile-credential-name]', profile.credential.name);
-  setText(root, '[data-profile-credential-issuer]', profile.credential.issuer);
-  setText(root, '[data-profile-credential-validity]', profile.credential.validity);
   const highlights = queryRequired(root, '[data-profile-highlights]');
   const highlightItems = profile.highlights.map((highlight) => {
     const item = createElement(root, 'div', 'profile-highlight');
@@ -175,7 +151,6 @@ export const renderTechnicalProfile = (root, profile) => {
     return item;
   });
   highlights.replaceChildren(...highlightItems);
-  queryRequired(root, '[data-profile-expertise]').replaceChildren(...profile.expertise.map((item) => createElement(root, 'li', '', item)));
 };
 
 /**
