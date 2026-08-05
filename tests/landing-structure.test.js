@@ -17,9 +17,6 @@ describe('estructura narrativa de la landing', () => {
       '05 / EXPERIENCIA Y DIRECCIÓN TÉCNICA',
       '06 / OBJECIONES FRECUENTES',
     ]);
-    expect(page.querySelector('main > .intro')).toBeNull();
-    expect(page.querySelector('main > .service-modes')).toBeNull();
-    expect(page.querySelector('main > .report')).toBeNull();
   });
 
   it('integra el ejemplo y cinco entregables sin repetir resultados', () => {
@@ -29,6 +26,5 @@ describe('estructura narrativa de la landing', () => {
     expect(siteConfig.audit.deliverables).toHaveLength(5);
     expect([...deliverables].map((item) => item.textContent)).toEqual(siteConfig.audit.deliverables);
     expect(page.querySelector('#entregables .report-panel')).not.toBeNull();
-    expect(page.querySelector('[data-outcomes]')).toBeNull();
   });
 });

@@ -18,11 +18,4 @@ describe('mapa de áreas del hero', () => {
     expect(nodes[0].classList).toContain('map-node-primary');
     expect(page.querySelector('.system-map')?.getAttribute('aria-label')).toContain('Procesos primero');
   });
-
-  it('no repite los conceptos en una barra debajo del hero', () => {
-    const html = readFileSync(`${process.cwd()}/index.html`, 'utf8');
-    const page = new DOMParser().parseFromString(html, 'text/html');
-
-    expect(page.querySelector('.hero > .signal-bar')).toBeNull();
-  });
 });

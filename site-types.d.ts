@@ -23,7 +23,6 @@ type AuditConfig = Readonly<{
 type SiteConfig = Readonly<{
   brandName: string;
   founderName: string;
-  domain: string;
   email: string;
   location: string;
   linkedinUrl: string;
@@ -34,7 +33,7 @@ type SiteConfig = Readonly<{
   audit: AuditConfig;
   technicalProfile: TechnicalProfile;
   faqs: readonly FaqItem[];
-  footer: Readonly<{ navigation: readonly SiteLink[]; legal: readonly SiteLink[] }>;
+  footer: Readonly<{ navigation: readonly SiteLink[] }>;
   seo: Readonly<{ title: string; description: string }>;
 }>;
 

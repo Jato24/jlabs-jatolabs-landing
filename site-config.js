@@ -11,7 +11,6 @@ const navigation = Object.freeze([
 export const siteConfig = Object.freeze({
   brandName: 'Jato Labs',
   founderName: 'Miguel Jato',
-  domain: 'https://jatolabs.tech',
   email: 'hola@jatolabs.tech',
   location: 'México / Remoto',
   linkedinUrl: 'https://www.linkedin.com/in/jatomx/',
@@ -107,7 +106,6 @@ export const siteConfig = Object.freeze({
   ]),
   footer: Object.freeze({
     navigation,
-    legal: Object.freeze([]),
   }),
   seo: Object.freeze({ title: 'Jato Labs | Auditoría de procesos y tecnología', description: 'Jato Labs audita y rediseña procesos de negocio apoyados por tecnología para eliminar fricción, priorizar mejoras y orientar decisiones de automatización e inversión.' }),
 });

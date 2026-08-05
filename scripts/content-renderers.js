@@ -127,7 +127,7 @@ export const renderReport = (root, audit) => {
 export const renderProcess = (root, process) => {
   const processList = queryRequired(root, '[data-process]');
   process.forEach((step, index) => {
-    const item = createElement(root, 'li', 'reveal');
+    const item = createElement(root, 'li');
     const copy = createElement(root, 'div');
     copy.append(createElement(root, 'h3', '', step.title), createElement(root, 'p', '', step.description));
     item.append(createElement(root, 'span', '', `0${index + 1}`), copy, createElement(root, 'small', '', step.outcome));

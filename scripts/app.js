@@ -7,7 +7,7 @@ import {
   renderSiteChrome,
   renderTechnicalProfile,
 } from './content-renderers.js';
-import { initFaqAccordion, initMobileMenu, initViewportEffects } from './interactions.js';
+import { initFaqAccordion, initHeaderScroll, initMobileMenu } from './interactions.js';
 import { resolveBookingUrl } from './links.js';
 
 /** @param {AppDependencies} dependencies */
@@ -22,5 +22,5 @@ export const bootstrap = ({ root, view, config }) => {
 
   initFaqAccordion(root);
   initMobileMenu(root, view);
-  initViewportEffects(root, view);
+  initHeaderScroll(root, view);
 };

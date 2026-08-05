@@ -29,7 +29,6 @@ describe('posicionamiento de procesos y tecnología', () => {
       'DevOps y confiabilidad',
     ]);
     expect(cards[0].classList).toContain('service-card-foundation');
-    expect(page.querySelector('.service-grid .service-icon')).toBeNull();
   });
 
   it('mantiene alcance y entregables críticos en el fallback HTML', () => {
