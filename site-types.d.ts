@@ -32,7 +32,6 @@ type SiteConfig = Readonly<{
   primaryCta: Readonly<{ label: string }>;
   navigation: readonly SiteLink[];
   audit: AuditConfig;
-  expectedOutcomes: readonly string[];
   technicalProfile: TechnicalProfile;
   faqs: readonly FaqItem[];
   footer: Readonly<{ navigation: readonly SiteLink[]; legal: readonly SiteLink[] }>;

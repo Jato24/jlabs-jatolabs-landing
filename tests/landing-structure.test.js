@@ -5,29 +5,30 @@ import { siteConfig } from '../site-config.js';
 const parsePage = () => new DOMParser().parseFromString(readFileSync(`${process.cwd()}/index.html`, 'utf8'), 'text/html');
 
 describe('estructura narrativa de la landing', () => {
-  it('presenta siete secciones numeradas con una función distinta', () => {
+  it('presenta seis secciones numeradas con una función distinta', () => {
     const page = parsePage();
     const indexes = [...page.querySelectorAll('main > section .section-index')].map((item) => item.textContent);
 
     expect(indexes).toEqual([
       '01 / EL PROBLEMA',
       '02 / LA AUDITORÍA',
-      '03 / ALCANCE Y RESULTADOS',
-      '04 / EJEMPLO DE REPORTE',
-      '05 / EL PROCESO',
-      '06 / EXPERIENCIA Y DIRECCIÓN TÉCNICA',
-      '07 / OBJECIONES FRECUENTES',
+      '03 / ALCANCE Y ENTREGABLES',
+      '04 / EL PROCESO',
+      '05 / EXPERIENCIA Y DIRECCIÓN TÉCNICA',
+      '06 / OBJECIONES FRECUENTES',
     ]);
     expect(page.querySelector('main > .intro')).toBeNull();
     expect(page.querySelector('main > .service-modes')).toBeNull();
+    expect(page.querySelector('main > .report')).toBeNull();
   });
 
-  it('integra seis resultados dentro de entregables', () => {
+  it('integra el ejemplo y cinco entregables sin repetir resultados', () => {
     const page = parsePage();
-    const outcomes = page.querySelectorAll('#entregables [data-outcomes] > li');
+    const deliverables = page.querySelectorAll('#entregables [data-audit-list="deliverables"] > li');
 
-    expect(page.querySelector('main > .outcomes')).toBeNull();
-    expect(siteConfig.expectedOutcomes).toHaveLength(6);
-    expect([...outcomes].map((item) => item.textContent)).toEqual(siteConfig.expectedOutcomes);
+    expect(siteConfig.audit.deliverables).toHaveLength(5);
+    expect([...deliverables].map((item) => item.textContent)).toEqual(siteConfig.audit.deliverables);
+    expect(page.querySelector('#entregables .report-panel')).not.toBeNull();
+    expect(page.querySelector('[data-outcomes]')).toBeNull();
   });
 });

@@ -122,11 +122,9 @@ export const renderReport = (root, audit) => {
 
 /**
  * @param {Document} root
- * @param {readonly string[]} outcomes
  * @param {AuditConfig['process']} process
  */
-export const renderDecisionContent = (root, outcomes, process) => {
-  queryRequired(root, '[data-outcomes]').replaceChildren(...outcomes.map((item) => createElement(root, 'li', '', item)));
+export const renderProcess = (root, process) => {
   const processList = queryRequired(root, '[data-process]');
   process.forEach((step, index) => {
     const item = createElement(root, 'li', 'reveal');

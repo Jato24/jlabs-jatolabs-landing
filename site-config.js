@@ -44,11 +44,9 @@ export const siteConfig = Object.freeze({
     ]),
     duration: 'Duración típica: entre 2 y 4 semanas, dependiendo del alcance y la complejidad de los procesos y sistemas revisados.',
     deliverables: Object.freeze([
-      'Resumen ejecutivo.', 'Mapa del proceso actual.', 'Análisis de valor y fricción.',
-      'Diseño del proceso objetivo.', 'Scorecard de procesos y tecnología.',
-      'Inventario de hallazgos.', 'Matriz de impacto y esfuerzo.',
-      'Oportunidades de automatización.', 'Roadmap de 90 días.',
-      'Sesión de presentación de resultados.',
+      'Mapa del proceso actual y objetivo.', 'Scorecard de procesos y tecnología.',
+      'Hallazgos y matriz de priorización.', 'Oportunidades de automatización.',
+      'Roadmap de 90 días y sesión ejecutiva.',
     ]),
     scorecard: Object.freeze([
       Object.freeze({ label: 'Procesos', score: '58 / 100', status: 'Alto' }),
@@ -83,11 +81,6 @@ export const siteConfig = Object.freeze({
       Object.freeze({ title: 'Sesión ejecutiva', description: 'Resultados, decisiones y ruta de acción con tu equipo.', outcome: 'ACTUAR' }),
     ]),
   }),
-  expectedOutcomes: Object.freeze([
-    'Procesos más simples y medibles.', 'Menos esperas y retrabajo.',
-    'Automatización basada en valor.', 'Visibilidad de riesgos, deuda y costos.',
-    'Prioridades claras por impacto y esfuerzo.', 'Roadmap alineado con objetivos de negocio.',
-  ]),
   technicalProfile: Object.freeze({
     role: 'Technology Executive · CTO · Cloud Architect',
     introduction: 'Miguel Jato combina más de 20 años de experiencia tecnológica con una trayectoria liderando equipos de ingeniería, construyendo plataformas digitales y llevando sistemas críticos desde la arquitectura hasta producción.',

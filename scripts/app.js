@@ -1,7 +1,7 @@
 // @ts-check
 import {
   renderAuditContent,
-  renderDecisionContent,
+  renderProcess,
   renderFaqs,
   renderReport,
   renderSiteChrome,
@@ -16,7 +16,7 @@ export const bootstrap = ({ root, view, config }) => {
   renderSiteChrome(root, config, bookingUrl);
   renderAuditContent(root, config.audit);
   renderReport(root, config.audit);
-  renderDecisionContent(root, config.expectedOutcomes, config.audit.process);
+  renderProcess(root, config.audit.process);
   renderTechnicalProfile(root, config.technicalProfile);
   renderFaqs(root, config.faqs);
 
