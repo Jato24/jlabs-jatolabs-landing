@@ -83,10 +83,6 @@ export const siteConfig = Object.freeze({
       Object.freeze({ title: 'Sesión ejecutiva', description: 'Resultados, decisiones y ruta de acción con tu equipo.', outcome: 'ACTUAR' }),
     ]),
   }),
-  serviceModes: Object.freeze([
-    Object.freeze({ title: 'Diagnóstico ejecutivo', description: 'Evaluación de alto nivel para identificar fricción operativa, riesgos tecnológicos y oportunidades prioritarias.', items: Object.freeze(['Procesos y valor.', 'Datos y automatización.', 'Arquitectura general.', 'Riesgos y costos.', 'Recomendaciones ejecutivas.', 'Roadmap inicial.']), cta: 'Solicitar diagnóstico' }),
-    Object.freeze({ title: 'Auditoría y rediseño especializado', description: 'Análisis profundo de procesos prioritarios y de la tecnología que los habilita.', items: Object.freeze(['Procesos y eficiencia operativa.', 'Datos.', 'Arquitectura y escalabilidad.', 'Cloud y FinOps.', 'Seguridad y supply chain.', 'DevOps y confiabilidad.']), cta: 'Solicitar auditoría especializada' }),
-  ]),
   expectedOutcomes: Object.freeze([
     'Procesos más simples y medibles.', 'Menos esperas y retrabajo.',
     'Automatización basada en valor.', 'Visibilidad de riesgos, deuda y costos.',

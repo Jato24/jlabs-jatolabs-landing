@@ -81,25 +81,6 @@ export const renderAuditContent = (root, audit) => {
 
 /**
  * @param {Document} root
- * @param {readonly ServiceMode[]} modes
- * @param {string} bookingUrl
- */
-export const renderServiceModes = (root, modes, bookingUrl) => {
-  const container = queryRequired(root, '[data-service-modes]');
-  modes.forEach((mode, index) => {
-    const article = createElement(root, 'article', 'mode-card reveal');
-    article.append(createElement(root, 'span', 'mode-number', `0${index + 1}`), createElement(root, 'h3', '', mode.title), createElement(root, 'p', '', mode.description));
-    const list = createElement(root, 'ul');
-    list.append(...mode.items.map((item) => createElement(root, 'li', '', item)));
-    const link = /** @type {HTMLAnchorElement} */ (createElement(root, 'a', 'text-link mode-cta', mode.cta));
-    link.href = bookingUrl;
-    article.append(list, link);
-    container.append(article);
-  });
-};
-
-/**
- * @param {Document} root
  * @param {AuditConfig} audit
  */
 export const renderReport = (root, audit) => {

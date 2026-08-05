@@ -5,21 +5,21 @@ import { siteConfig } from '../site-config.js';
 const parsePage = () => new DOMParser().parseFromString(readFileSync(`${process.cwd()}/index.html`, 'utf8'), 'text/html');
 
 describe('estructura narrativa de la landing', () => {
-  it('presenta ocho secciones numeradas con una función distinta', () => {
+  it('presenta siete secciones numeradas con una función distinta', () => {
     const page = parsePage();
     const indexes = [...page.querySelectorAll('main > section .section-index')].map((item) => item.textContent);
 
     expect(indexes).toEqual([
       '01 / EL PROBLEMA',
       '02 / LA AUDITORÍA',
-      '03 / MODALIDADES',
-      '04 / ALCANCE Y RESULTADOS',
-      '05 / EJEMPLO DE REPORTE',
-      '06 / EL PROCESO',
-      '07 / EXPERIENCIA Y DIRECCIÓN TÉCNICA',
-      '08 / OBJECIONES FRECUENTES',
+      '03 / ALCANCE Y RESULTADOS',
+      '04 / EJEMPLO DE REPORTE',
+      '05 / EL PROCESO',
+      '06 / EXPERIENCIA Y DIRECCIÓN TÉCNICA',
+      '07 / OBJECIONES FRECUENTES',
     ]);
     expect(page.querySelector('main > .intro')).toBeNull();
+    expect(page.querySelector('main > .service-modes')).toBeNull();
   });
 
   it('integra seis resultados dentro de entregables', () => {

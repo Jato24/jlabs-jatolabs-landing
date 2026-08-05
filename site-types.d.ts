@@ -1,5 +1,4 @@
 type SiteLink = Readonly<{ label: string; href: string }>;
-type ServiceMode = Readonly<{ title: string; description: string; items: readonly string[]; cta: string }>;
 type Finding = Readonly<{ title: string; area: string; severity: 'Crítico' | 'Alto' | 'Medio' | 'Bajo'; impact: string; effort: string; recommendation: string }>;
 type TechnicalProfile = Readonly<{
   role: string;
@@ -35,7 +34,6 @@ type SiteConfig = Readonly<{
   primaryCta: Readonly<{ label: string }>;
   navigation: readonly SiteLink[];
   audit: AuditConfig;
-  serviceModes: readonly ServiceMode[];
   expectedOutcomes: readonly string[];
   technicalProfile: TechnicalProfile;
   faqs: readonly FaqItem[];
