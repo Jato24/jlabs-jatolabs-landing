@@ -29,6 +29,7 @@ describe('posicionamiento de procesos y tecnología', () => {
       'DevOps y confiabilidad',
     ]);
     expect(cards[0].classList).toContain('service-card-foundation');
+    expect(page.querySelector('.service-grid .service-icon')).toBeNull();
   });
 
   it('incluye rediseño de procesos sin perder ingeniería de software', () => {

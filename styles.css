@@ -35,3 +35,7 @@ html{scroll-padding-top:90px}a:focus-visible,button:focus-visible{outline:3px so
 .merged-outcomes{margin-top:16px;padding:42px}.merged-outcomes .outcomes-grid{gap:60px}.merged-outcomes h3{margin:0;font-size:clamp(1.7rem,3vw,2.5rem);line-height:1.1;letter-spacing:-.04em}.merged-outcomes .outcome-list li{min-height:110px}
 @media(max-width:900px){.merged-outcomes .outcomes-grid{gap:28px}}
 @media(max-width:600px){.merged-outcomes{padding:26px}.merged-outcomes .outcome-list li{min-height:auto}}
+.service-card{min-height:330px;padding:24px}.service-card-foundation{min-height:250px}.service-icon{margin:34px 0 18px}.service-card ul{margin-top:18px;padding-top:16px}
+@media(max-width:600px){.service-card,.service-card-foundation{min-height:auto}}
+.service-card,.service-card-foundation,.service-card:nth-child(4),.service-card:nth-child(5){grid-column:span 2;min-height:0;padding:20px}.service-card-foundation{background:linear-gradient(120deg,#d7d5cd,#e7e6df)}.service-card h3{margin:18px 0 10px;font-size:1.12rem}.service-card p{margin:0;font-size:.8rem}.service-card ul{margin:14px 0 0;padding-top:12px;line-height:1.65}
+@media(max-width:900px){.service-card,.service-card-foundation,.service-card:nth-child(4),.service-card:nth-child(5),.service-card:last-child{grid-column:auto}}
