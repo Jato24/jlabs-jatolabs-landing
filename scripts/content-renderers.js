@@ -44,7 +44,7 @@ export const renderSiteChrome = (root, config, bookingUrl) => {
     link.href = `mailto:${config.email}`;
     link.hidden = !config.email;
   });
-  root.querySelectorAll('[data-location]').forEach((element) => { element.textContent = `Auditoría técnica especializada · ${config.location}`; });
+  root.querySelectorAll('[data-location]').forEach((element) => { element.textContent = `Auditoría de procesos y tecnología · ${config.location}`; });
   root.querySelectorAll('[data-linkedin]').forEach((element) => {
     const link = /** @type {HTMLAnchorElement} */ (element);
     link.href = config.linkedinUrl;

@@ -1,6 +1,6 @@
 # Jato Labs Landing Page
 
-Landing page estática de [Jato Labs](https://jatolabs.tech), enfocada en servicios de diagnóstico y auditoría técnica especializada.
+Landing page estática de [Jato Labs](https://jatolabs.tech), enfocada en servicios de diagnóstico, auditoría y rediseño de procesos apoyados por tecnología.
 
 ## Stack
 
