@@ -28,15 +28,6 @@ export const createElement = (documentRef, tag, className = '', text = '') => {
 };
 
 /**
- * @param {ParentNode} root
- * @param {string} selector
- * @param {string} value
- */
-export const setText = (root, selector, value) => {
-  queryRequired(root, selector).textContent = value;
-};
-
-/**
  * @param {Document} documentRef
  * @param {HTMLElement} container
  * @param {string} label

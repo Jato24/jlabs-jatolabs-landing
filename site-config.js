@@ -3,17 +3,14 @@ const navigation = Object.freeze([
   Object.freeze({ label: 'Servicios', href: '#servicios' }),
   Object.freeze({ label: 'Entregables', href: '#entregables' }),
   Object.freeze({ label: 'Proceso', href: '#proceso' }),
-  Object.freeze({ label: 'Experiencia', href: '#experiencia' }),
   Object.freeze({ label: 'Preguntas frecuentes', href: '#preguntas-frecuentes' }),
   Object.freeze({ label: 'Contacto', href: '#contacto' }),
 ]);
 
 export const siteConfig = Object.freeze({
   brandName: 'Jato Labs',
-  founderName: 'Miguel Jato',
   email: 'hola@jatolabs.tech',
   location: 'México / Remoto',
-  linkedinUrl: 'https://www.linkedin.com/in/jatomx/',
   bookingUrl: '',
   bookingSubject: 'Llamada de 30 minutos para mi empresa',
   primaryCta: Object.freeze({ label: 'Agendar llamada de 30 minutos' }),
@@ -79,17 +76,6 @@ export const siteConfig = Object.freeze({
       Object.freeze({ title: 'Priorización', description: 'Hallazgos ordenados por impacto, urgencia y esfuerzo.', outcome: 'DECIDIR' }),
       Object.freeze({ title: 'Sesión ejecutiva', description: 'Resultados, decisiones y ruta de acción con tu equipo.', outcome: 'ACTUAR' }),
     ]),
-  }),
-  technicalProfile: Object.freeze({
-    role: 'Technology Executive · CTO · Cloud Architect',
-    introduction: 'Miguel Jato combina más de 20 años de experiencia tecnológica con una trayectoria liderando equipos de ingeniería, construyendo plataformas digitales y llevando sistemas críticos desde la arquitectura hasta producción.',
-    perspective: 'Su experiencia conecta procesos, profundidad técnica y dirección ejecutiva: cuestiona cómo se crea valor antes de decidir sobre arquitectura, cloud, seguridad o automatización, y conecta esas decisiones con costos, riesgo operativo y crecimiento.',
-    highlights: Object.freeze([
-      Object.freeze({ value: '20+', label: 'años de experiencia en tecnología' }),
-      Object.freeze({ value: 'AWS + GCP', label: 'arquitectura y operación multi-cloud' }),
-      Object.freeze({ value: 'CTO', label: 'liderazgo técnico y de ingeniería' }),
-    ]),
-    linkedinCta: 'Conocer la trayectoria completa en LinkedIn',
   }),
   faqs: Object.freeze([
     Object.freeze({ question: '¿La auditoría empieza por procesos o por tecnología?', answer: 'Empieza por entender el objetivo, el flujo de trabajo y las actividades que aportan valor. Después revisa los datos y la tecnología que habilitan ese proceso. Así se evita automatizar ineficiencias o recomendar herramientas sin una necesidad clara.' }),

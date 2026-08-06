@@ -11,19 +11,19 @@ Landing page estática de [Jato Labs](https://jatolabs.tech), enfocada en servic
 - Vitest y jsdom para pruebas.
 - TypeScript `checkJs` en modo estricto.
 
-La aplicación publicada no necesita Node.js ni `node_modules`. Las dependencias de npm se utilizan únicamente durante desarrollo y validación.
+La aplicación publicada no necesita Node.js ni `node_modules`. Las dependencias de pnpm se utilizan únicamente durante desarrollo y validación.
 
 ## Desarrollo local
 
 Requisitos:
 
 - Node.js 20.19 o posterior.
-- npm.
+- pnpm 10.
 
 Instala las dependencias:
 
 ```bash
-npm ci
+pnpm install --frozen-lockfile
 ```
 
 Sirve la raíz del proyecto mediante HTTP. Por ejemplo:
@@ -37,25 +37,25 @@ Después abre `http://localhost:4173`. Los ES Modules no deben probarse directam
 ## Comandos
 
 ```bash
-npm test
+pnpm test
 ```
 
 Ejecuta una vez la suite de Vitest.
 
 ```bash
-npm run test:watch
+pnpm test:watch
 ```
 
 Ejecuta Vitest en modo interactivo.
 
 ```bash
-npm run typecheck
+pnpm typecheck
 ```
 
 Valida JavaScript y pruebas con `checkJs --strict`.
 
 ```bash
-npm run verify
+pnpm verify
 ```
 
 Ejecuta pruebas y typecheck. Este es el comando recomendado antes de publicar cambios.
@@ -78,7 +78,7 @@ El contenido crítico de cliente ideal existe inicialmente en HTML para permanec
 
 ## Contenido y contacto
 
-Los textos, CTA, navegación, correo, LinkedIn, modalidades, reporte ilustrativo, FAQ y SEO se editan en `site-config.js`.
+Los textos, CTA, navegación, correo, modalidades, reporte ilustrativo, FAQ y SEO se editan en `site-config.js`.
 
 Cuando `bookingUrl` está vacío, el CTA utiliza el correo configurado y genera un enlace `mailto:` con asunto.
 
@@ -114,5 +114,5 @@ No publiques `node_modules`, pruebas ni archivos temporales como parte de los re
 2. Confirma que la prueba falle por la razón correcta.
 3. Implementa el cambio mínimo.
 4. Refactoriza manteniendo la suite en verde.
-5. Ejecuta `npm run verify`.
+5. Ejecuta `pnpm verify`.
 6. Revisa anclas, responsive, teclado y carga HTTP antes de desplegar.

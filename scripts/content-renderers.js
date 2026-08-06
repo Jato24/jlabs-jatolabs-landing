@@ -1,5 +1,5 @@
 // @ts-check
-import { appendTextRow, createElement, queryRequired, setText } from './dom.js';
+import { appendTextRow, createElement, queryRequired } from './dom.js';
 
 /**
  * @param {Document} documentRef
@@ -36,7 +36,6 @@ export const renderSiteChrome = (root, config, bookingUrl) => {
 
   root.querySelectorAll('[data-primary-cta]').forEach((element) => { element.textContent = config.primaryCta.label; });
   root.querySelectorAll('[data-brand-name]').forEach((element) => { element.textContent = config.brandName.toUpperCase(); });
-  root.querySelectorAll('[data-founder-name]').forEach((element) => { element.textContent = config.founderName; });
   root.querySelectorAll('[data-booking-link]').forEach((element) => { (/** @type {HTMLAnchorElement} */ (element)).href = bookingUrl; });
   root.querySelectorAll('[data-contact-email]').forEach((element) => {
     const link = /** @type {HTMLAnchorElement} */ (element);
@@ -45,11 +44,6 @@ export const renderSiteChrome = (root, config, bookingUrl) => {
     link.hidden = !config.email;
   });
   root.querySelectorAll('[data-location]').forEach((element) => { element.textContent = `Auditoría de procesos y tecnología · ${config.location}`; });
-  root.querySelectorAll('[data-linkedin]').forEach((element) => {
-    const link = /** @type {HTMLAnchorElement} */ (element);
-    link.href = config.linkedinUrl;
-    link.hidden = !config.linkedinUrl;
-  });
   root.querySelectorAll('[data-current-year]').forEach((element) => { element.textContent = String(new Date().getFullYear()); });
 };
 
@@ -133,24 +127,6 @@ export const renderProcess = (root, process) => {
     item.append(createElement(root, 'span', '', `0${index + 1}`), copy, createElement(root, 'small', '', step.outcome));
     processList.append(item);
   });
-};
-
-/**
- * @param {Document} root
- * @param {TechnicalProfile} profile
- */
-export const renderTechnicalProfile = (root, profile) => {
-  setText(root, '[data-profile-role]', profile.role);
-  setText(root, '[data-profile-introduction]', profile.introduction);
-  setText(root, '[data-profile-perspective]', profile.perspective);
-  setText(root, '[data-profile-linkedin-cta]', profile.linkedinCta);
-  const highlights = queryRequired(root, '[data-profile-highlights]');
-  const highlightItems = profile.highlights.map((highlight) => {
-    const item = createElement(root, 'div', 'profile-highlight');
-    item.append(createElement(root, 'dt', '', highlight.value), createElement(root, 'dd', '', highlight.label));
-    return item;
-  });
-  highlights.replaceChildren(...highlightItems);
 };
 
 /**

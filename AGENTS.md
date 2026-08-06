@@ -46,7 +46,7 @@ Mantener la landing estática de Jato Labs clara, comercial, accesible y fácil 
 Antes de entregar, ejecuta:
 
 ```bash
-npm run verify
+pnpm verify
 git diff --check
 ```
 
