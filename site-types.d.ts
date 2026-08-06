@@ -1,12 +1,5 @@
 type SiteLink = Readonly<{ label: string; href: string }>;
 type Finding = Readonly<{ title: string; area: string; severity: 'Crítico' | 'Alto' | 'Medio' | 'Bajo'; impact: string; effort: string; recommendation: string }>;
-type TechnicalProfile = Readonly<{
-  role: string;
-  introduction: string;
-  perspective: string;
-  highlights: readonly Readonly<{ value: string; label: string }>[];
-  linkedinCta: string;
-}>;
 type FaqItem = Readonly<{ question: string; answer: string }>;
 type AuditConfig = Readonly<{
   hero: Readonly<{ title: string; subtitle: string; secondaryCta: string; reassurance: string }>;
@@ -22,16 +15,13 @@ type AuditConfig = Readonly<{
 }>;
 type SiteConfig = Readonly<{
   brandName: string;
-  founderName: string;
   email: string;
   location: string;
-  linkedinUrl: string;
   bookingUrl: string;
   bookingSubject: string;
   primaryCta: Readonly<{ label: string }>;
   navigation: readonly SiteLink[];
   audit: AuditConfig;
-  technicalProfile: TechnicalProfile;
   faqs: readonly FaqItem[];
   footer: Readonly<{ navigation: readonly SiteLink[] }>;
   seo: Readonly<{ title: string; description: string }>;

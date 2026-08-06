@@ -5,7 +5,6 @@ import {
   renderFaqs,
   renderReport,
   renderSiteChrome,
-  renderTechnicalProfile,
 } from './content-renderers.js';
 import { initFaqAccordion, initHeaderScroll, initMobileMenu } from './interactions.js';
 import { resolveBookingUrl } from './links.js';
@@ -17,7 +16,6 @@ export const bootstrap = ({ root, view, config }) => {
   renderAuditContent(root, config.audit);
   renderReport(root, config.audit);
   renderProcess(root, config.audit.process);
-  renderTechnicalProfile(root, config.technicalProfile);
   renderFaqs(root, config.faqs);
 
   initFaqAccordion(root);

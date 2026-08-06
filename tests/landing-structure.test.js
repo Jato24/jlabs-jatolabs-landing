@@ -5,7 +5,7 @@ import { siteConfig } from '../site-config.js';
 const parsePage = () => new DOMParser().parseFromString(readFileSync(`${process.cwd()}/index.html`, 'utf8'), 'text/html');
 
 describe('estructura narrativa de la landing', () => {
-  it('presenta seis secciones numeradas con una función distinta', () => {
+  it('presenta cinco secciones numeradas con una función distinta', () => {
     const page = parsePage();
     const indexes = [...page.querySelectorAll('main > section .section-index')].map((item) => item.textContent);
 
@@ -14,8 +14,7 @@ describe('estructura narrativa de la landing', () => {
       '02 / LA AUDITORÍA',
       '03 / ALCANCE Y ENTREGABLES',
       '04 / EL PROCESO',
-      '05 / EXPERIENCIA Y DIRECCIÓN TÉCNICA',
-      '06 / OBJECIONES FRECUENTES',
+      '05 / OBJECIONES FRECUENTES',
     ]);
   });
 

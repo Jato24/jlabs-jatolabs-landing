@@ -6,7 +6,6 @@ const expectedNavigation = [
   ['Servicios', '#servicios'],
   ['Entregables', '#entregables'],
   ['Proceso', '#proceso'],
-  ['Experiencia', '#experiencia'],
   ['Preguntas frecuentes', '#preguntas-frecuentes'],
   ['Contacto', '#contacto'],
 ];
