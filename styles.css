@@ -31,3 +31,5 @@ html{scroll-padding-top:90px}a:focus-visible,button:focus-visible{outline:3px so
 @media(max-width:900px){.service-card,.service-card-foundation,.service-card:nth-child(4),.service-card:nth-child(5),.service-card:last-child{grid-column:auto}}
 .embedded-report{margin-top:70px;padding-top:60px;border-top:1px solid #b8b6ac}.embedded-report .report-heading h3{margin:0;font-size:clamp(2rem,4vw,3.6rem);line-height:1.05;letter-spacing:-.05em}
 @media(max-width:600px){.embedded-report{margin-top:48px;padding-top:42px}}
+.test-site-watermark{position:fixed;right:18px;bottom:18px;z-index:45;max-width:min(280px,calc(100vw - 32px));margin:0;padding:9px 13px;border:1px dashed rgba(201,255,61,.72);background:rgba(9,11,16,.88);color:var(--acid);font:500 .58rem/1.35 var(--mono);letter-spacing:.08em;text-align:center;text-transform:uppercase;box-shadow:0 4px 20px rgba(0,0,0,.24);pointer-events:none}
+@media(max-width:600px){.test-site-watermark{right:10px;bottom:10px;max-width:calc(100vw - 20px);font-size:.52rem}}

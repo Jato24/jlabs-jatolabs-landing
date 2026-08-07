@@ -35,6 +35,7 @@ export const renderSiteChrome = (root, config, bookingUrl) => {
   renderLinks(root, queryRequired(root, '[data-footer-navigation]'), config.footer.navigation);
 
   root.querySelectorAll('[data-primary-cta]').forEach((element) => { element.textContent = config.primaryCta.label; });
+  root.querySelectorAll('[data-test-site-notice]').forEach((element) => { element.textContent = config.testSiteNotice; });
   root.querySelectorAll('[data-brand-name]').forEach((element) => { element.textContent = config.brandName.toUpperCase(); });
   root.querySelectorAll('[data-booking-link]').forEach((element) => { (/** @type {HTMLAnchorElement} */ (element)).href = bookingUrl; });
   root.querySelectorAll('[data-contact-email]').forEach((element) => {

@@ -13,6 +13,7 @@ export const siteConfig = Object.freeze({
   location: 'México / Remoto',
   bookingUrl: '',
   bookingSubject: 'Llamada de 30 minutos para mi empresa',
+  testSiteNotice: 'Sitio demo de pruebas cloud · No ofrece servicios profesionales reales',
   primaryCta: Object.freeze({ label: 'Agendar llamada de 30 minutos' }),
   navigation,
   audit: Object.freeze({
