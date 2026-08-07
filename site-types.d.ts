@@ -19,6 +19,7 @@ type SiteConfig = Readonly<{
   location: string;
   bookingUrl: string;
   bookingSubject: string;
+  testSiteNotice: string;
   primaryCta: Readonly<{ label: string }>;
   navigation: readonly SiteLink[];
   audit: AuditConfig;

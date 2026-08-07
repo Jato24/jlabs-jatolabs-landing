@@ -2,6 +2,9 @@
 
 Landing page estática de [Jato Labs](https://jatolabs.tech), enfocada en servicios de diagnóstico, auditoría y rediseño de procesos apoyados por tecnología.
 
+> [!NOTE]
+> Este proyecto no es una landing de servicios profesionales reales, sino una demostración creada para probar la integración de GitHub Pages con Cloudflare para sitios web estáticos.
+
 ## Stack
 
 - HTML semántico.

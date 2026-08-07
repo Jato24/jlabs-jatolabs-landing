@@ -3,6 +3,7 @@ import { describe, expect, it } from 'vitest';
 import { siteConfig } from '../site-config.js';
 
 const expectedTitle = 'Descubre qué está frenando la escalabilidad de tu negocio';
+const expectedTestSiteNotice = 'Sitio demo de pruebas cloud · No ofrece servicios profesionales reales';
 
 describe('posicionamiento de procesos y tecnología', () => {
   it('presenta el nuevo posicionamiento en configuración y fallback HTML', () => {
@@ -39,5 +40,16 @@ describe('posicionamiento de procesos y tecnología', () => {
 
     expect(textOf('[data-audit-list="scope"]')).toEqual(siteConfig.audit.scope);
     expect(textOf('[data-audit-list="deliverables"]')).toEqual(siteConfig.audit.deliverables);
+  });
+
+  it('identifica de forma visible el sitio como una prueba de tecnologías de nube', () => {
+    const html = readFileSync(`${process.cwd()}/index.html`, 'utf8');
+    const page = new DOMParser().parseFromString(html, 'text/html');
+    const notice = page.querySelector('[data-test-site-notice]');
+
+    expect(siteConfig.testSiteNotice).toBe(expectedTestSiteNotice);
+    expect(notice?.textContent).toBe(expectedTestSiteNotice);
+    expect(notice?.getAttribute('role')).toBe('note');
+    expect(notice?.classList).toContain('test-site-watermark');
   });
 });
